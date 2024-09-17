@@ -35,9 +35,9 @@ def custom_erode(image, kernel):
 
 """ # Read the image
 image = cv2.imread("Erosion.png", cv2.IMREAD_GRAYSCALE)
-image = image.tolist()  # Convert to 2D list
+image = image.tolist() 
 
-# Define a simple kernel (replace with your desired kernel)
+
 kernel = [[1, 1, 1],
           [1, 1, 1],
           [1, 1, 1]]
@@ -47,5 +47,5 @@ eroded_image = custom_erode(image, kernel)
 
 # The code below saves image as eroded. But we don't have to use numpy so I couldn't save an existing image without them.
 # But it seems codes running well when I try to get result with using numpy
-eroded_image_cv2 = np.array(eroded_image, dtype=np.uint8)  # Convert back for saving with cv2
+eroded_image_cv2 = np.array(eroded_image, dtype=np.uint8) 
 cv2.imwrite("Eroded_Custom.png", eroded_image_cv2)  """
